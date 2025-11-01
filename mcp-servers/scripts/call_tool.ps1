@@ -40,3 +40,23 @@ Invoke-WebRequest -Uri "http://127.0.0.1:8000/mcp" `
         } 
     }' `
     | Select-Object -ExpandProperty Content
+
+# Call `is_perfect_number` tool
+
+Invoke-WebRequest -Uri "http://127.0.0.1:8001/mcp" `
+    -Method POST `
+    -Headers @{ 
+        "Content-Type" = "application/json"; 
+        "Accept" = "application/json, text/event-stream"; 
+        "Mcp-Session-Id" = $sessionId
+    } `
+    -Body '{ 
+        "jsonrpc": "2.0", 
+        "id": 3, 
+        "method": "tools/call", 
+        "params": { 
+            "name": "is_perfect_number", 
+            "arguments": { "n": 6 } 
+        } 
+    }' `
+    | Select-Object -ExpandProperty Content
