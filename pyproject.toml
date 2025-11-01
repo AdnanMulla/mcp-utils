@@ -7,7 +7,7 @@ requires-python = ">=3.13"
 dependencies = [
     "fastmcp>=2.13.0.2",
     "ipykernel>=7.1.0",
-    "langchain[google,google-genai]>=1.0.3",
+    "langchain[google-genai]>=1.0.3",
     "langgraph>=1.0.2",
     "python-dotenv>=1.2.1",
 ]

@@ -10,5 +10,4 @@ wheels/
 .venv
 
 # Env file
-agents/simple-chatbot/.env
-agents/smart-chatbot/.env
+**/.env
