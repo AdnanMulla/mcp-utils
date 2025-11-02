@@ -24,4 +24,4 @@ Math Agent
 - User inputs in the terminal
 - START -> classify_input -> call_tool -> respond -> END
 
-![Numerics Server](math-agent/numerics_server.png)
+![Numerics Server](simple-math-agent/numerics_server.png)
